@@ -16,7 +16,7 @@ Pour configurer l'application de pétition dans votre environnement local, suive
 2. Naviguez vers le répertoire du projet.
 3. Installez les dépendances (si applicable).
 ```bash
-git clone https://github.git@github.com:khadimfall2/CloudProject.git
+
 git clone https://github.com/khadimfall2/CloudProject.git
 # Installez ici les dépendances
 
