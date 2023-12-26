@@ -18,6 +18,8 @@ Pour configurer l'application de pétition dans votre environnement local, suive
 ```bash
 
 git clone https://github.com/khadimfall2/CloudProject.git
+git clone https://git@github.com:khadimfall2/CloudProject.git
+
 # Installez ici les dépendances
 
 Structure des fichiers
