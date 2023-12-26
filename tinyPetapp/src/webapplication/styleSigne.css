@@ -1,0 +1,99 @@
+/* styleSignature.css */
+
+/* Style général du corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('D/.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+/* Titre de la page */
+.title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* Sous-titre */
+h2 {
+    color: #3498db;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Styles des paragraphes */
+p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Conteneur pour les images */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+/* Blocs individuels pour les images */
+.image-block {
+    text-align: center;
+}
+
+/* Style des images */
+.styled-image {
+    width: 1600px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton "Signer" */
+.button.is-info {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.button.is-info:hover {
+    background-color: #c0392b;
+}
+.balloon-animation {
+    /* CSS pour l'animation du ballon */
+    animation: float 5s infinite;
+}
+
+.gift-animation {
+    /* CSS pour l'animation du cadeau */
+    animation: pop-in 3s ease-out;
+}
+
+@keyframes float {
+    /* Définir l'animation de flottement pour le ballon */
+}
+
+@keyframes pop-in {
+    /* Définir l'animation d'apparition pour le cadeau */
+}
+

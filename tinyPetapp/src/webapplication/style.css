@@ -1,0 +1,202 @@
+/* Styles de base */
+body {
+    position: relative;
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge */
+    padding: 0; /* Assurez-vous qu'il n'y a pas de rembourrage */
+    height: 100%; /* Hauteur totale */
+    overflow: auto; /* Permet le défilement si le contenu dépasse la hauteur de la fenêtre */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('D/back.png'); /* Assurez-vous que le nom de l'image correspond */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.3; /* Réglez l'opacité comme vous le souhaitez, 0.5 pour une demi-transparence */
+    z-index: -1; /* Garde l'image en arrière-plan */
+}
+
+}
+
+/* Personnalisation de la section principale */
+.section {
+    padding: 50px 0;
+}
+
+/* Titre principal */
+.title {
+    color: #363636; /* Couleur de texte foncée pour un meilleur contraste */
+    text-align: center; /* Centre le titre */
+    margin-bottom: 30px;
+}
+
+/* Styles des champs de formulaire */
+.field {
+    margin-bottom: 20px;
+}
+
+.field .label {
+    color: #4a4a4a; /* Couleur légèrement plus foncée pour les labels */
+    font-weight: bold;
+}
+
+.control .input, 
+.control .textarea {
+    border: 2px solid #dbdbdb; /* Bordure plus épaisse pour les champs de saisie */
+    border-radius: 4px; /* Bordures arrondies */
+}
+
+.control .textarea {
+    min-height: 120px; /* Hauteur minimale pour la zone de texte */
+}
+
+/* Bouton de soumission */
+.button.is-info {
+    background-color: #3273dc; /* Couleur personnalisée pour le bouton */
+    color: white;
+    width: 30%; /* Fait en sorte que le bouton s'étende sur toute la largeur du champ */
+    padding: 10px 15px;
+    font-size: 1.1em; /* Taille de police légèrement plus grande */
+    border-radius: 4px;
+}
+
+.button.is-info:hover {
+    background-color: #276cda; /* Légère variation de couleur au survol */
+}
+
+/* Styles pour les images */
+img {
+    display: block;
+    margin: 20px auto; /* Centre les images et ajoute de la marge */
+    width:  1200px; /* Assure que l'image ne dépasse pas sa conteneur */
+    height: 300px;
+}
+/* Styles pour le titre h2 */
+h2 {
+    color: #4A90E2; /* Une couleur bleue pour symboliser la paix */
+    text-align: center; /* Centrer le titre */
+    margin-top: 1em; /* Espace au-dessus du titre */
+    margin-bottom: 0.5em; /* Espace en dessous du titre pour séparer du texte */
+    font-family: 'Arial', sans-serif; /* Police plus formelle */
+    font-weight: bold; /* Rendre le titre gras */
+    font-size: 2em; /* Taille de police du titre */
+}
+
+/* Styles pour les paragraphes */
+p {
+    color: #333; /* Couleur de texte standard pour une bonne lisibilité */
+    font-family: 'Georgia', serif; /* Une police avec empattements pour le confort de lecture */
+    line-height: 1.6; /* Espace entre les lignes pour une meilleure lisibilité */
+    text-align: justify; /* Justifier le texte pour un bloc uniforme */
+    margin-bottom: 1em; /* Espace après chaque paragraphe */
+    width: 80%; /* Largeur maximale du texte pour une lecture confortable */
+    margin-left: auto; /* Centrer le bloc de texte horizontalement */
+    margin-right: auto;
+}
+
+/* Optionnel: Ajoutez une classe spécifique pour les paragraphes importants */
+.important {
+    background-color: #f9f9f9; /* Un fond légèrement gris pour les mettre en évidence */
+    border-left: 4px solid #4A90E2; /* Une bordure sur le côté pour indiquer l'importance */
+    padding: 0.5em; /* Un peu de rembourrage autour du texte */
+    margin-bottom: 1em; /* Espace après le paragraphe */
+}
+
+
+.styled-image {
+    width: auto;
+    max-width: 200%;
+    height: 300;
+    border-radius: 4px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-block {
+    text-align: center;
+    margin: 10px;
+}
+
+.styled-image {
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: auto;
+    border-radius: 10px; /* Bords arrondis pour un look doux */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère pour plus de profondeur */
+}
+
+h1 {
+    color: #333; /* Couleur du texte */
+    margin-bottom: 15px;
+}
+
+<style>
+  body {
+    background-color: #f0f4f8;
+    font-family: 'Arial', sans-serif;
+  }
+
+  h3 {
+    color: #333366;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #aaa;
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px #ddd;
+    box-sizing: border-box;
+  }
+
+  .error {
+    color: #ff6666;
+  }
+
+  .success {
+    color: #66cc66;
+  }
+/*Authentification */
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #999;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
+
+

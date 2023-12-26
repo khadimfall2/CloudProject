@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>authentification</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+ <link rel="stylesheet" href="style.css">
+
+<script src="https://unpkg.com/mithril/mithril.js"></script>
+
+</head>
+<body>
+
+<script>	
+
+
+var PetitionView = {
+    signed: false,
+    name: '',
+    email: '',
+    comment: '',
+    successMessage: '',
+    errorMessage: '',
+    signPetition: function() {
+        if (this.signed) {
+            this.errorMessage = "Vous avez déjà signé cette pétition.";
+            return;
+        }
+        
+     
+        if (!this.name || !this.email) {
+            this.errorMessage = "Veuillez remplir tous les champs requis.";
+            return;
+        }
+
+        m.request({
+            method: "POST",
+            url: "_ah/api/myApi/v1/signPetition",
+            body: { name: this.name, email: this.email, comment: this.comment } // Utilisez 'body' au lieu de 'params' pour POST
+        })
+        .then((result) => {
+            this.signed = true;
+            this.successMessage = "Merci pour votre signature!";
+            this.name = ''; 
+            this.email = '';
+            this.comment = '';
+            m.redraw(); 
+        })
+       // .catch((error) => {
+        //    this.errorMessage = "Erreur lors de la signature: " + error.message;
+         //   m.redraw();
+       // });
+    },
+    view: function() {
+        return m('div', [
+            m('h3', ' Authentification '),
+            this.successMessage ? m('p', {class: 'success'}, this.successMessage) : null,
+            this.errorMessage ? m('p', {class: 'error'}, this.errorMessage) : null,
+            m("input[type=text][placeholder=Votre nom]", {
+                oninput: (e) => { this.name = e.target.value; },
+                value: this.name,
+                disabled: this.signed
+            }),
+            m("input[type=text][placeholder=Votre email]", {
+                oninput: (e) => { this.email = e.target.value; },
+                value: this.email,
+                disabled: this.signed
+            }),
+            m("textarea[placeholder=Votre commentaire]", {
+                oninput: (e) => { this.comment = e.target.value; },
+                value: this.comment,
+                disabled: this.signed
+            }),
+            m('button', {
+    onclick: () => {
+        this.signPetition();
+        window.location.href = 'petition.html'; // Redirige vers la page de pétition dans le même dossier
+    },
+    disabled: this.signed
+}, 'Valider')
+
+        ]);
+    }
+};
+
+
+
+var Hello = {
+   view: function() {
+       return m('div', {class:'container'}, [
+           
+           m('div',{class: 'tile is-ancestor'},[
+              
+               m("div", {class: 'tile'}, m('div',{class:'tile is-child box'}, m(PetitionView)))
+           ])
+       ]);
+   }
+};
+
+m.mount(document.body, Hello)	
+document.addEventListener('DOMContentLoaded', function() {
+    var button = document.createElement('button'); // Création d'un élément bouton
+    button.innerHTML = 'Passer à la signature'; // Définition du texte du bouton
+    button.onclick = function() {
+        window.location.href = 'petition.html'; // Redirection vers 'index.html' lors du clic
+    };
+    document.body.appendChild(button); // Ajout du bouton à la page
+}
+);
+
+
+</script>
+
+
+</body>
+</html>

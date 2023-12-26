@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Signer une Pétition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styleSigne.css">
+    <script>
+        //document.addEventListener('DOMContentLoaded', function() {
+          //  var count = 0;
+          //  document.getElementById('signButton').addEventListener('click', function() {
+            //    count++;
+             //   document.getElementById('signCount').textContent = 'Nombre de signatures: ' + count;
+            //});
+      //  });
+      document.addEventListener('DOMContentLoaded', function() {
+    var isSigned = false;
+    document.getElementById('signButton').addEventListener('click', function() {
+        isSigned = !isSigned; // Alterne entre vrai et faux à chaque clic
+        var count = isSigned ? 100 :99 ;
+        document.getElementById('signCount').textContent = 'Nombre de signatures: ' + count;
+    });
+});
+
+    </script>
+</head>
+<body>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Signer la pétition</h1>
+        <h2>Ensemble pour la Paix</h2>
+        <!-- ... Contenu textuel de votre pétition ... -->
+
+        <div class="image-container">
+            <!-- ... Images et titres pour la cause ... -->
+        </div>
+
+        <!-- Compteur de signatures -->
+        <p id="signCount">Nombre de signatures: 0</p>
+
+        <!-- Bouton "Signer" -->
+        <form id="petitionForm" action="merci.html" method="post">
+            <div class="field">
+                <div class="control">
+                    <button type="button" id="signButton" class="button is-info">Signer</button>
+                </div>
+            </div>
+        </form>
+      <p></p>
+        <!-- Bouton "Valider mon choix" -->
+        <div class="field">
+            <div class="control">
+                <a href="merci.html" class="button is-primary">Valider </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+/* Style général du corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('D/back.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+/* Titre de la page */
+.title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* Sous-titre */
+h2 {
+    color: #3498db;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Styles des paragraphes */
+p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Conteneur pour les images */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+/* Blocs individuels pour les images */
+.image-block {
+    text-align: center;
+    width: calc(50% - 15px); /* Ajuste la largeur pour deux images par ligne avec un espacement */
+}
+
+/* Style des images */
+.styled-image {
+    width: 100%;
+    height: auto; /* Garantit que les images conservent leur ratio d'aspect */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de survol */
+}
+
+.styled-image:hover {
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
+
+/* Bouton "Signer" */
+.button.is-info {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px; /* Complétez la propriété border-radius */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.button.is-info:hover {
+    background-color: #c0392b; /* Légèrement plus foncé au survol */
+}
+/**/
+.custom-button {
+    background-color: #4CAF50; /* Couleur verte */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Rembourrage autour du texte */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    border-radius: 5px; /* Bords arrondis */
+    font-size: 16px; /* Taille de police */
+    display: flex; /* Utilise Flexbox */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 10px; /* Espace entre l'icône et le texte */
+    transition: background-color 0.3s; /* Effet de transition pour le survol */
+}
+
+.custom-button:hover {
+    background-color: #45a049; /* Changement de couleur au survol */
+}
+
+.custom-button .icon {
+    font-size: 20px; /* Taille de l'icône */
+}
+
